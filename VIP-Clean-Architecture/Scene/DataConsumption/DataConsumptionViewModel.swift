@@ -12,4 +12,5 @@ struct DataConsumptionCellVM {
     var year: String?
     var quater: String?
     var isDecreaseVolume: Bool?
+    var dataUsage: String?
 }

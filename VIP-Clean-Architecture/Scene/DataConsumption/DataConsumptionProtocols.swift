@@ -14,7 +14,7 @@ protocol DataConsumptionPresenterInput {
 }
 
 protocol DataConsumptionPresenterOutput: AnyObject {
-    func displayDataConsumptionList(vm: [DataConsumptionCellVM])
+    func displayDataConsumptionList(vm: [(title: String, vms: [DataConsumptionCellVM])])
     func displayErrorMessage(message: String)
 }
 

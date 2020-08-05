@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		04AFB50FF137B5D7D40CC75D /* Pods_VIP_Clean_Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0C878C47ADB4B8D78177ED /* Pods_VIP_Clean_Architecture.framework */; };
 		2A13251E24DA7866006B1778 /* BaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13251D24DA7866006B1778 /* BaseConfig.swift */; };
+		2A13252024DA8282006B1778 /* DataConsumptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13251F24DA8282006B1778 /* DataConsumptionCell.swift */; };
+		2A13252224DA83DD006B1778 /* DataConsumptionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13252124DA83DD006B1778 /* DataConsumptionViewHeader.swift */; };
+		2A13252424DA8FF7006B1778 /* NSConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13252324DA8FF7006B1778 /* NSConstraint.swift */; };
+		2A13252624DAA6E2006B1778 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13252524DAA6E2006B1778 /* Extensions.swift */; };
 		2AACCB1A24D9BEA600FE98F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB1924D9BEA600FE98F6 /* AppDelegate.swift */; };
 		2AACCB1C24D9BEA600FE98F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB1B24D9BEA600FE98F6 /* SceneDelegate.swift */; };
 		2AACCB1E24D9BEA600FE98F6 /* DataConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB1D24D9BEA600FE98F6 /* DataConsumptionViewController.swift */; };
@@ -48,6 +52,10 @@
 /* Begin PBXFileReference section */
 		02692914154289F1E02C9BB3 /* Pods-VIP-Clean-Architecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIP-Clean-Architecture.debug.xcconfig"; path = "Target Support Files/Pods-VIP-Clean-Architecture/Pods-VIP-Clean-Architecture.debug.xcconfig"; sourceTree = "<group>"; };
 		2A13251D24DA7866006B1778 /* BaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConfig.swift; sourceTree = "<group>"; };
+		2A13251F24DA8282006B1778 /* DataConsumptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConsumptionCell.swift; sourceTree = "<group>"; };
+		2A13252124DA83DD006B1778 /* DataConsumptionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConsumptionViewHeader.swift; sourceTree = "<group>"; };
+		2A13252324DA8FF7006B1778 /* NSConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSConstraint.swift; sourceTree = "<group>"; };
+		2A13252524DAA6E2006B1778 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2AACCB1624D9BEA600FE98F6 /* VIP-Clean-Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIP-Clean-Architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AACCB1924D9BEA600FE98F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AACCB1B24D9BEA600FE98F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +186,8 @@
 				2AACCB6624D9EC2C00FE98F6 /* DataConsumptionApiWorker.swift */,
 				2AACCB6824D9ECD900FE98F6 /* DataConsumptionRouter.swift */,
 				2AACCB6A24DA076F00FE98F6 /* DataConsumptionProtocols.swift */,
+				2A13251F24DA8282006B1778 /* DataConsumptionCell.swift */,
+				2A13252124DA83DD006B1778 /* DataConsumptionViewHeader.swift */,
 			);
 			path = DataConsumption;
 			sourceTree = "<group>";
@@ -250,6 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				2A13251D24DA7866006B1778 /* BaseConfig.swift */,
+				2A13252324DA8FF7006B1778 /* NSConstraint.swift */,
+				2A13252524DAA6E2006B1778 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -448,9 +460,11 @@
 				2A13251E24DA7866006B1778 /* BaseConfig.swift in Sources */,
 				2AACCB4C24D9C8BD00FE98F6 /* Assets.swift in Sources */,
 				2AACCB5B24D9DDC300FE98F6 /* NSBaseSpacers.swift in Sources */,
+				2A13252024DA8282006B1778 /* DataConsumptionCell.swift in Sources */,
 				2AACCB5D24D9E31600FE98F6 /* MicroServicePaths.swift in Sources */,
 				2AACCB6524D9EC1000FE98F6 /* DataConsumptionConfigurator.swift in Sources */,
 				2AACCB5324D9CAFF00FE98F6 /* NSBaseStackView.swift in Sources */,
+				2A13252424DA8FF7006B1778 /* NSConstraint.swift in Sources */,
 				2AACCB5124D9CAC000FE98F6 /* NSViewController.swift in Sources */,
 				2AACCB1A24D9BEA600FE98F6 /* AppDelegate.swift in Sources */,
 				2AACCB4A24D9C89F00FE98F6 /* Colors.swift in Sources */,
@@ -459,8 +473,10 @@
 				2AACCB2424D9BEA600FE98F6 /* VIP_Clean_Architecture.xcdatamodeld in Sources */,
 				2AACCB6B24DA076F00FE98F6 /* DataConsumptionProtocols.swift in Sources */,
 				2AACCB6724D9EC2C00FE98F6 /* DataConsumptionApiWorker.swift in Sources */,
+				2A13252624DAA6E2006B1778 /* Extensions.swift in Sources */,
 				2AACCB1C24D9BEA600FE98F6 /* SceneDelegate.swift in Sources */,
 				2AACCB6324D9EBFA00FE98F6 /* DataConsumptionViewModel.swift in Sources */,
+				2A13252224DA83DD006B1778 /* DataConsumptionViewHeader.swift in Sources */,
 				2AACCB4624D9C77300FE98F6 /* DataUsageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
