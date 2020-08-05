@@ -8,10 +8,11 @@
 
 import Foundation
 
-public typealias SPHDataResponse = MobileDataUsage.DataUsage
+public typealias SPHDataResponse = MobileDataUsage
 
 public struct MobileDataUsage {
-    // MARK: - Welcome
+    
+    // MARK: - DataUsage
     public struct DataUsage: Codable {
         let help: String?
         let success: Bool?

@@ -9,5 +9,5 @@
 import Foundation
 
 struct MicroServicePaths {
-    static let dataUsage = "/api/action/datastore_search?"
+    static let dataUsage = "/api/action/datastore_search"
 }

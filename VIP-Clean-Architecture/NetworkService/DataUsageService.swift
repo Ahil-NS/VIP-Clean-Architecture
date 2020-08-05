@@ -16,22 +16,21 @@ public enum DataUsageService {
 extension DataUsageService: TargetType {
     public var baseURL: URL {
         switch self {
-        case .getDataUsage(let offset, let limit, let resourceId):
+        case .getDataUsage:
             //TODOA
-            return URL(string: "https://data.gov.sg/api/action/datastore_search?offset=\(offset)&resource_id=\(resourceId)&limit=\(limit)")!
+            return URL(string: "https://data.gov.sg")!
         }
     }
     
     public var path: String {
         switch self {
-        case .getDataUsage : return ""
+        case .getDataUsage : return MicroServicePaths.dataUsage
         }
     }
     
     public var method: Moya.Method {
         switch self {
         case .getDataUsage: return .get
-            
         }
     }
     
@@ -42,7 +41,7 @@ extension DataUsageService: TargetType {
     public var task: Task {
         switch self {
         case .getDataUsage:
-             return .requestPlain
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         }
     }
     
@@ -50,5 +49,11 @@ extension DataUsageService: TargetType {
         return ["Content-Type": "application/json"]
     }
     
+    public var parameters: [String: Any] {
+        switch self {
+        case .getDataUsage(let offset,let limit,let resourceId):
+            return ["offset": offset, "limit": limit, "resource_id": resourceId]
+        }
+    }
 }
 
