@@ -14,6 +14,11 @@ final class DataConsumptionInteractor {
     let output: DataConsumptionPresenterInput
     let apiWorker: DataConsumptionApiWorker = DataConsumptionApiWorker()
     
+    private var dataConsumptionRecord = [[SPHDataResponse.Record]]()
+    private var offset: Int = 0
+    private var limit: Int = 10
+    private var isFetchInProgress = false
+    
     // MARK: - Initializers
     init(output: DataConsumptionPresenterInput) {
         self.output = output
@@ -23,16 +28,38 @@ final class DataConsumptionInteractor {
 
 extension DataConsumptionInteractor: DataConsumptionInteractorInput {
     func getMobileDataConsumption() {
-        apiWorker.getDataConsumption(offset: 10, resourceId: "a807b7ab-6cad-4aa6-87d0-e283a7353a0f", limit: 10)
+        guard !isFetchInProgress else {
+            return
+        }
+        isFetchInProgress = true
+        apiWorker.getDataConsumption(offset: offset, resourceId: "a807b7ab-6cad-4aa6-87d0-e283a7353a0f", limit: limit)
     }
 }
 
 extension  DataConsumptionInteractor: DataConsumptionApiProtocol {
     func didGetDataConsumption(response: SPHDataResponse.DataUsage?) {
-        self.output.presentData(data: response?.result)
+        self.isFetchInProgress = false
+        self.offset = response?.result?.offset ?? 0
+        self.limit = response?.result?.limit ?? 10
+        updateConsumptionList(response?.result?.records ?? [])
     }
     
     func didFailedDataConsumption() {
+        self.isFetchInProgress = false
         self.output.displayErrorMessage(message: "")
+        
+    }
+}
+
+extension DataConsumptionInteractor {
+    func updateConsumptionList(_ records: [SPHDataResponse.Record]) {
+        var oldRecord = self.dataConsumptionRecord.flatMap{$0}
+        oldRecord = oldRecord + records
+        
+        let groupedRecordByYear = oldRecord.group { $0.year }
+        self.dataConsumptionRecord = groupedRecordByYear
+        
+        self.offset = self.offset + self.limit
+        self.output.presentData(data: dataConsumptionRecord)
     }
 }
