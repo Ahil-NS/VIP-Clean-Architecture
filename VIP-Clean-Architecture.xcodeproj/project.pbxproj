@@ -14,6 +14,7 @@
 		2A13252424DA8FF7006B1778 /* NSConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13252324DA8FF7006B1778 /* NSConstraint.swift */; };
 		2A13252624DAA6E2006B1778 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13252524DAA6E2006B1778 /* Extensions.swift */; };
 		2A13252824DAC2CC006B1778 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13252724DAC2CC006B1778 /* Constants.swift */; };
+		2A13252A24DAFE53006B1778 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13252924DAFE53006B1778 /* Environment.swift */; };
 		2AACCB1A24D9BEA600FE98F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB1924D9BEA600FE98F6 /* AppDelegate.swift */; };
 		2AACCB1C24D9BEA600FE98F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB1B24D9BEA600FE98F6 /* SceneDelegate.swift */; };
 		2AACCB1E24D9BEA600FE98F6 /* DataConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB1D24D9BEA600FE98F6 /* DataConsumptionViewController.swift */; };
@@ -58,6 +59,7 @@
 		2A13252324DA8FF7006B1778 /* NSConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSConstraint.swift; sourceTree = "<group>"; };
 		2A13252524DAA6E2006B1778 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2A13252724DAC2CC006B1778 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2A13252924DAFE53006B1778 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		2AACCB1624D9BEA600FE98F6 /* VIP-Clean-Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIP-Clean-Architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AACCB1924D9BEA600FE98F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AACCB1B24D9BEA600FE98F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				2A13251D24DA7866006B1778 /* BaseConfig.swift */,
 				2A13252324DA8FF7006B1778 /* NSConstraint.swift */,
 				2A13252524DAA6E2006B1778 /* Extensions.swift */,
+				2A13252924DAFE53006B1778 /* Environment.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				2AACCB6B24DA076F00FE98F6 /* DataConsumptionProtocols.swift in Sources */,
 				2AACCB6724D9EC2C00FE98F6 /* DataConsumptionApiWorker.swift in Sources */,
 				2A13252624DAA6E2006B1778 /* Extensions.swift in Sources */,
+				2A13252A24DAFE53006B1778 /* Environment.swift in Sources */,
 				2AACCB1C24D9BEA600FE98F6 /* SceneDelegate.swift in Sources */,
 				2AACCB6324D9EBFA00FE98F6 /* DataConsumptionViewModel.swift in Sources */,
 				2A13252224DA83DD006B1778 /* DataConsumptionViewHeader.swift in Sources */,

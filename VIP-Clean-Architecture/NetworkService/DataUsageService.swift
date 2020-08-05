@@ -17,8 +17,7 @@ extension DataUsageService: TargetType {
     public var baseURL: URL {
         switch self {
         case .getDataUsage:
-            //TODOA
-            return URL(string: "https://data.gov.sg")!
+            return Environment.baseURL
         }
     }
     

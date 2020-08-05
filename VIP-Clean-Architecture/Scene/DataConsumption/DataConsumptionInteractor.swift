@@ -32,7 +32,7 @@ extension DataConsumptionInteractor: DataConsumptionInteractorInput {
             return
         }
         isFetchInProgress = true
-        apiWorker.getDataConsumption(offset: offset, resourceId: "a807b7ab-6cad-4aa6-87d0-e283a7353a0f", limit: limit)
+        apiWorker.getDataConsumption(offset: offset, resourceId: Environment.resourceId, limit: limit)
     }
 }
 
