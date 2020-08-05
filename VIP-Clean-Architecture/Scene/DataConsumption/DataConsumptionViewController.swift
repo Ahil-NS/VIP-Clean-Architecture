@@ -62,6 +62,7 @@ class DataConsumptionViewController: UIViewController {
         tableView.register(DataConsumptionCell.self, forCellReuseIdentifier: DataConsumptionCell.reuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.prefetchDataSource = self
     }
 }
 
@@ -114,4 +115,19 @@ extension DataConsumptionViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     
+}
+
+extension DataConsumptionViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        if let loadCellIndexPath =  tableView.indexPathsForVisibleRows?.last {
+            if isLastCell(for: loadCellIndexPath) {
+                output?.getMobileDataConsumption()
+            }
+        }
+    }
+    
+    //TODOA
+    func isLastCell(for indexPath: IndexPath) -> Bool {
+        return indexPath.row >=  (vmMain.last?.vms.count ?? 1) - 1
+    }
 }
