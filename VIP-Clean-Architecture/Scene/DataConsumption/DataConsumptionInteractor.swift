@@ -15,9 +15,9 @@ final class DataConsumptionInteractor {
     let apiWorker: DataConsumptionApiWorker = DataConsumptionApiWorker()
     
     private var dataConsumptionRecord = [[SPHDataResponse.Record]]()
-    private var offset: Int = 0
-    private var limit: Int = 10
-    private var isFetchInProgress = false
+    var offset: Int = 0
+    var limit: Int = 10
+    var isFetchInProgress = false
     
     // MARK: - Initializers
     init(output: DataConsumptionPresenterInput) {

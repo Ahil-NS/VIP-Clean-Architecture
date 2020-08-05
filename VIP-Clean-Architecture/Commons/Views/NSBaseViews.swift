@@ -22,14 +22,8 @@ class NSView: UIView {
     
     final private func setup() {
         translatesAutoresizingMaskIntoConstraints = false
-        setupViews()
         setupConstraints()
     }
-    
-    func setupViews() {
-        //to be overriden in subClasses
-    }
-    
     func setupConstraints() {
         //to be overriden in subClasses
     }
@@ -51,15 +45,6 @@ class NSLabel: UILabel {
 
     private final func setup() {
         translatesAutoresizingMaskIntoConstraints = false
-        setupViews()
-        setupConstraints()
-    }
-
-    func setupViews() {
-    }
-
-    func setupConstraints() {
-
     }
 }
 
@@ -79,27 +64,6 @@ class NSButton: UIButton {
     
     private final func setup() {
         translatesAutoresizingMaskIntoConstraints = false
-        setupViews()
-    }
-    
-    func setupViews() {
-        
     }
 }
 
-class NSTableView: UITableView {
-    
-    override init(frame: CGRect, style: UITableView.Style) {
-        super.init(frame: frame, style: style)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    final private func setup() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-    }
-}

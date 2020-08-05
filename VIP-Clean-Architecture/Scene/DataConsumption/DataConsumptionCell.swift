@@ -28,7 +28,7 @@ class DataConsumptionCell: UITableViewCell {
         }
     }
     
-    private let quaterLabel : NSLabel = {
+    let quaterLabel : NSLabel = {
         let lbl = NSLabel()
         lbl.textColor = .black
         lbl.font = UIFont.boldSystemFont(ofSize: 16)
@@ -38,7 +38,7 @@ class DataConsumptionCell: UITableViewCell {
     }()
     
     
-    private let dataUsageLabel : NSLabel = {
+    let dataUsageLabel : NSLabel = {
         let lbl = NSLabel()
         lbl.textColor = .black
         lbl.font = UIFont.systemFont(ofSize: 16)

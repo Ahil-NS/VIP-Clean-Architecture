@@ -9,7 +9,7 @@
 import UIKit
 import UIKit
 
-final class PCRHomeConfigurator: PPBaseConfig {
+final class PCRHomeConfigurator: NSBaseConfig {
     
     // MARK: - Singleton
     static let sharedInstance: PCRHomeConfigurator = PCRHomeConfigurator()

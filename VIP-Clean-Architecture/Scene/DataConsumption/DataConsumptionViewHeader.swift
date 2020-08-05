@@ -15,7 +15,8 @@ class DataConsumptionViewHeader: UITableViewHeaderFooterView {
             titleLabel.text = vm
         }
     }
-    private let titleLabel : NSLabel = {
+    
+    let titleLabel : NSLabel = {
         let lbl = NSLabel()
         lbl.textColor = .black
         lbl.font = UIFont.boldSystemFont(ofSize: 16)

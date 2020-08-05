@@ -8,14 +8,15 @@
 
 import UIKit
 
-typealias Conf = PConfigurator
+typealias Conf = NSConfigurator
 
-protocol PPBaseConfig {
+protocol NSBaseConfig {
     func configure(viewController: UIViewController)
 }
-class PConfigurator {
-    private static var privateShared: PConfigurator = PConfigurator()
-    static let shared: PConfigurator = {
+
+class NSConfigurator {
+    private static var privateShared: NSConfigurator = NSConfigurator()
+    static let shared: NSConfigurator = {
         return privateShared
     }()
 }

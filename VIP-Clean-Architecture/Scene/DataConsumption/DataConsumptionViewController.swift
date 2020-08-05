@@ -13,7 +13,7 @@ class DataConsumptionViewController: UIViewController {
     var output: DataConsumptionInteractorInput?
     var router: DataConsumptionRouterProtocol?
     
-    private var vmMain:[(title: String, vms: [DataConsumptionCellVM])] = []
+    var vmMain:[(title: String, vms: [DataConsumptionCellVM])] = []
     
     let tableView = UITableView()
     
@@ -28,13 +28,10 @@ class DataConsumptionViewController: UIViewController {
     }
     
     // MARK: - Configurator
-    private func configure(configurator: PPBaseConfig = PCRHomeConfigurator.sharedInstance) {
+    private func configure(configurator: NSBaseConfig = PCRHomeConfigurator.sharedInstance) {
         configurator.configure(viewController: self)
     }
     
-    deinit {
-        //dealloc called
-    }
     
     override func viewDidLoad() {
         setupViews()
