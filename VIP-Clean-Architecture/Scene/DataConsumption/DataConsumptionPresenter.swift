@@ -18,19 +18,34 @@ final class DataConsumptionPresenter {
 }
 
 extension DataConsumptionPresenter: DataConsumptionPresenterInput {
-    func presentData(data: SPHDataResponse.Result?) {
-        var cellVM: [DataConsumptionCellVM] = []
-        
-        //TODO isDecreaseVolume
-        data?.records?.forEach{ item in
-            let vm = DataConsumptionCellVM(year: item.year, quater: item.quarterStr, isDecreaseVolume: false)
-            cellVM.append(vm)
-        }
-        output?.displayDataConsumptionList(vm: cellVM)
+    
+    func presentData(data: [[SPHDataResponse.Record]]) {
+        output?.displayDataConsumptionList(vm: generateListVM(data: data))
     }
     
     func displayErrorMessage(message: String) {
         output?.displayErrorMessage(message: message)
     }
+    
+    func generateListVM(data: [[SPHDataResponse.Record]]) ->  [(title: String, vms: [DataConsumptionCellVM])]{
+        //TODO isDecreaseVolume
+        var vmData: [(title: String, vms: [DataConsumptionCellVM])] = []
+        
+        data.forEach{ item in
+            var cellVM: [DataConsumptionCellVM] = []
+            var year = ""
+            item.forEach{ singleData in
+                let vm: DataConsumptionCellVM = DataConsumptionCellVM(year: singleData.year,
+                                                                      quater: singleData.quarterStr,
+                                                                      isDecreaseVolume: false,
+                                                                      dataUsage: singleData.volumeOfMobileData)
+                cellVM.append(vm)
+                year = singleData.year
+            }
+            vmData.append((year, cellVM))
+        }
+        return vmData
+    }
 }
+
 

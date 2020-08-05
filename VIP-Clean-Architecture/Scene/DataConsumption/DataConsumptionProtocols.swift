@@ -10,7 +10,7 @@ import Foundation
 
 protocol DataConsumptionPresenterInput {
     func displayErrorMessage(message: String)
-    func presentData(data: SPHDataResponse.Result?)
+    func presentData(data: [[SPHDataResponse.Record]])
 }
 
 protocol DataConsumptionPresenterOutput: AnyObject {
