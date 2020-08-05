@@ -26,7 +26,7 @@ extension DataConsumptionPresenter: DataConsumptionPresenterInput {
             let vm = DataConsumptionCellVM(year: item.year, quater: item.quarterStr, isDecreaseVolume: false)
             cellVM.append(vm)
         }
-        output?.displayPlayList(vm: cellVM)
+        output?.displayDataConsumptionList(vm: cellVM)
     }
     
     func displayErrorMessage(message: String) {
