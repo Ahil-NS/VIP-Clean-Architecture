@@ -14,20 +14,16 @@ class DataConsumptionCell: UITableViewCell {
         return String(describing: DataConsumptionCell.self)
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     var cellVM: DataConsumptionCellVM? {
         didSet {
             quaterLabel.text = cellVM?.quater
             dataUsageLabel.text = cellVM?.dataUsage
+            downButton.isHidden = !(cellVM?.isDecreaseVolume ?? false)
         }
     }
     
-    private let quaterLabel : UILabel = {
-        let lbl = UILabel()
+    private let quaterLabel : NSLabel = {
+        let lbl = NSLabel()
         lbl.textColor = .black
         lbl.font = UIFont.boldSystemFont(ofSize: 16)
         lbl.textAlignment = .left
@@ -36,14 +32,40 @@ class DataConsumptionCell: UITableViewCell {
     }()
     
     
-    private let dataUsageLabel : UILabel = {
-        let lbl = UILabel()
+    private let dataUsageLabel : NSLabel = {
+        let lbl = NSLabel()
         lbl.textColor = .black
         lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
         return lbl
     }()
+    
+    lazy var cellStackView: NSVerticalStackView = {
+        let stackView: NSVerticalStackView = NSVerticalStackView()
+        stackView.addArrangedSubview(NSVertical15Spacer())
+        stackView.addArrangedSubview(quaterLabel)
+        stackView.addArrangedSubview(NSVertical15Spacer())
+        stackView.addArrangedSubview(dataUsageLabel)
+        stackView.addArrangedSubview(NSVertical15Spacer())
+        return stackView
+    }()
+    
+    lazy var cellHorizontalStackView: NSHorizontalStackView = {
+        let stackView:NSHorizontalStackView = NSHorizontalStackView()
+        stackView.alignment = .center
+        stackView.addArrangedSubview(NSHorizontalSpacer.create(with: 15))
+        stackView.addArrangedSubview(cellStackView)
+        stackView.addArrangedSubview(NSHorizontalSpacer.create(with: 15))
+        stackView.addArrangedSubview(downButton)
+        stackView.addArrangedSubview(NSHorizontalSpacer.create(with: 15))
+        return stackView
+    }()
+    
+    
+    var containerView = NSView()
+    
+    var downButton = NSButton()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -52,18 +74,35 @@ class DataConsumptionCell: UITableViewCell {
     }
     
     func setupViews() {
-        contentView.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        setupCloseButton()
+        containerView.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+        containerView.layer.cornerRadius = 10
         
-        let stackView = NSStackView(arrangedSubviews: [quaterLabel, dataUsageLabel])
-        stackView.distribution = .equalSpacing
-        stackView.axis = .horizontal
-        stackView.spacing = 5
-        addSubview(stackView)
-        stackView.fill(self)
         
+        containerView.addSubview(cellHorizontalStackView)
+        cellHorizontalStackView.fill(containerView)
+        
+        
+        contentView.addSubview(containerView)
+        containerView.fill(contentView, withMargin: 20)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setupCloseButton() {
+        downButton.setTitle("Down", for: .normal)
+        
+        downButton.tintColor = .white
+        downButton.widthAnchor.constraint(equalToConstant: 64).isActive = true
+        downButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        downButton.addTarget(self, action: #selector(downButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func downButtonTapped() {
+        downButton.isHidden = true
+        
+    }
+    
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NSSpacer: PIView {
+class NSSpacer: NSView {
     
     public static func addSpacer(withWidth width: CGFloat? = nil, withHeight height: CGFloat? = nil ) -> NSSpacer {
         
