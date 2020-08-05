@@ -6,4 +6,16 @@
 //  Copyright © 2020 Ahil Ahilendran. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+typealias Conf = PConfigurator
+
+protocol PPBaseConfig {
+    func configure(viewController: UIViewController)
+}
+class PConfigurator {
+    private static var privateShared: PConfigurator = PConfigurator()
+    static let shared: PConfigurator = {
+        return privateShared
+    }()
+}
