@@ -24,6 +24,21 @@ class DataConsumptionViewHeader: UITableViewHeaderFooterView {
         return lbl
     }()
     
+    lazy var cellStackView: NSVerticalStackView = {
+        let stackView: NSVerticalStackView = NSVerticalStackView()
+        stackView.addArrangedSubview(NSVertical15Spacer())
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(NSVertical15Spacer())
+        return stackView
+    }()
+    
+    lazy var containerStackView: NSHorizontalStackView = {
+        let stackView:NSHorizontalStackView = NSHorizontalStackView()
+        stackView.addArrangedSubview(NSHorizontalSpacer.create(with: 30))
+        stackView.addArrangedSubview(cellStackView)
+        stackView.addArrangedSubview(NSHorizontalSpacer.create(with: 30))
+        return stackView
+    }()
     
     static var reuseIdentifier: String {
         return String(describing: DataConsumptionViewHeader.self)
@@ -36,8 +51,8 @@ class DataConsumptionViewHeader: UITableViewHeaderFooterView {
     
     func setupViews() {
         contentView.backgroundColor = .orange
-        addSubview(titleLabel)
-        titleLabel.fill(self)
+        addSubview(containerStackView)
+        containerStackView.fill(self)
     }
     
     required init?(coder aDecoder: NSCoder) {

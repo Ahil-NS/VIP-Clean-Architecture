@@ -28,19 +28,22 @@ extension DataConsumptionPresenter: DataConsumptionPresenterInput {
     }
     
     func generateListVM(data: [[SPHDataResponse.Record]]) ->  [(title: String, vms: [DataConsumptionCellVM])]{
-        //TODO isDecreaseVolume
         var vmData: [(title: String, vms: [DataConsumptionCellVM])] = []
         
         data.forEach{ item in
             var cellVM: [DataConsumptionCellVM] = []
             var year = ""
+          
             item.forEach{ singleData in
+                let minimumVolume = item.map{ Float($0.volumeOfMobileData ?? "0")}.compactMap({$0}).min()
+                let isDown = (minimumVolume ==  Float(singleData.volumeOfMobileData ?? "0")) ? true : false
                 let vm: DataConsumptionCellVM = DataConsumptionCellVM(year: singleData.year,
                                                                       quater: singleData.quarterStr,
-                                                                      isDecreaseVolume: false,
+                                                                      isDecreaseVolume: isDown,
                                                                       dataUsage: singleData.volumeOfMobileData)
                 cellVM.append(vm)
-                year = singleData.year
+                let totalAmount = item.map({Float($0.volumeOfMobileData ?? "0") ?? 0}).reduce(0, +)
+                year = "Year: \(singleData.year) - \(totalAmount)"
             }
             vmData.append((year, cellVM))
         }
