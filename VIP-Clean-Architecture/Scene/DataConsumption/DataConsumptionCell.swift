@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol  DataConsumptionCellDelagate: class {
+    func downButtonTapped()
+}
+
 class DataConsumptionCell: UITableViewCell {
+    
+    weak var delegate: DataConsumptionCellDelagate?
     
     static var reuseIdentifier: String {
         return String(describing: DataConsumptionCell.self)
@@ -92,17 +98,16 @@ class DataConsumptionCell: UITableViewCell {
     }
     
     func setupCloseButton() {
-        downButton.setTitle("Down", for: .normal)
-        
+        let downImage = UIImage(named: SPHConstants.AssetString.downIcon.value)
+        downButton.setBackgroundImage(downImage, for: .normal)
         downButton.tintColor = .white
-        downButton.widthAnchor.constraint(equalToConstant: 64).isActive = true
-        downButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        downButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        downButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         downButton.addTarget(self, action: #selector(downButtonTapped), for: .touchUpInside)
     }
     
     @objc func downButtonTapped() {
-        downButton.isHidden = true
-        
+        delegate?.downButtonTapped()
     }
     
 }

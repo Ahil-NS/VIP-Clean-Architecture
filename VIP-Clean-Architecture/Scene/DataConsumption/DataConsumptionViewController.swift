@@ -111,6 +111,7 @@ extension DataConsumptionViewController: UITableViewDelegate, UITableViewDataSou
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DataConsumptionCell.reuseIdentifier, for: indexPath) as? DataConsumptionCell else { return UITableViewCell() }
         cell.cellVM = vmMain[safe: indexPath.section]?.vms[safe: indexPath.row]
+        cell.delegate = self
         return cell
     }
     
@@ -130,4 +131,12 @@ extension DataConsumptionViewController: UITableViewDataSourcePrefetching {
     func isLastCell(for indexPath: IndexPath) -> Bool {
         return indexPath.row >=  (vmMain.last?.vms.count ?? 1) - 1
     }
+}
+
+extension DataConsumptionViewController: DataConsumptionCellDelagate {
+    func downButtonTapped() {
+       debugPrint("tapped")
+    }
+    
+    
 }
