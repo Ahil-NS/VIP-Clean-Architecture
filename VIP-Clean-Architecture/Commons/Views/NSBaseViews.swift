@@ -37,6 +37,32 @@ class PIView: UIView {
     
 }
 
+class NSLabel: UILabel {
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    private final func setup() {
+        translatesAutoresizingMaskIntoConstraints = false
+        setupViews()
+        setupConstraints()
+    }
+
+    func setupViews() {
+    }
+
+    func setupConstraints() {
+
+    }
+}
+
 class NSButton: UIButton {
     
     var indexPath: IndexPath?
