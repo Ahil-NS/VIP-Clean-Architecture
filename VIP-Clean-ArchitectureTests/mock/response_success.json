@@ -1,0 +1,80 @@
+{
+  "help": "https://data.gov.sg/api/3/action/help_show?name=datastore_search",
+  "success": true,
+  "result": {
+    "resource_id": "a807b7ab-6cad-4aa6-87d0-e283a7353a0f",
+    "fields": [
+      {
+        "type": "int4",
+        "id": "_id"
+      },
+      {
+        "type": "text",
+        "id": "quarter"
+      },
+      {
+        "type": "numeric",
+        "id": "volume_of_mobile_data"
+      }
+    ],
+    "records": [
+      {
+        "volume_of_mobile_data": "0.012635",
+        "quarter": "2007-Q1",
+        "_id": 11
+      },
+      {
+        "volume_of_mobile_data": "0.029992",
+        "quarter": "2007-Q2",
+        "_id": 12
+      },
+      {
+        "volume_of_mobile_data": "0.053584",
+        "quarter": "2007-Q3",
+        "_id": 13
+      },
+      {
+        "volume_of_mobile_data": "0.100934",
+        "quarter": "2007-Q4",
+        "_id": 14
+      },
+      {
+        "volume_of_mobile_data": "0.171586",
+        "quarter": "2008-Q1",
+        "_id": 15
+      },
+      {
+        "volume_of_mobile_data": "0.248899",
+        "quarter": "2008-Q2",
+        "_id": 16
+      },
+      {
+        "volume_of_mobile_data": "0.439655",
+        "quarter": "2008-Q3",
+        "_id": 17
+      },
+      {
+        "volume_of_mobile_data": "0.683579",
+        "quarter": "2008-Q4",
+        "_id": 18
+      },
+      {
+        "volume_of_mobile_data": "1.066517",
+        "quarter": "2009-Q1",
+        "_id": 19
+      },
+      {
+        "volume_of_mobile_data": "1.357248",
+        "quarter": "2009-Q2",
+        "_id": 20
+      }
+    ],
+    "_links": {
+      "start": "/api/action/datastore_search?limit=10&resource_id=a807b7ab-6cad-4aa6-87d0-e283a7353a0f",
+      "next": "/api/action/datastore_search?offset=20&limit=10&resource_id=a807b7ab-6cad-4aa6-87d0-e283a7353a0f"
+    },
+    "offset": 10,
+    "limit": 30,
+    "total": 59
+  }
+}

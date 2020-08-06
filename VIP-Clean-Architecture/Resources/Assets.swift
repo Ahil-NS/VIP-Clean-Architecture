@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+typealias SPHAssets = SPHImageAssets.AssetString
+
+struct SPHImageAssets {
+    
+    enum AssetString: String {
+        case downIcon = "down-icon"
+        
+        var value: String {
+            return self.rawValue
+        }
+    }
+}

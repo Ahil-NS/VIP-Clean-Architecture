@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -35,6 +36,16 @@
                BlueprintIdentifier = "2AACCB2E24D9BEA800FE98F6"
                BuildableName = "VIP-Clean-ArchitectureTests.xctest"
                BlueprintName = "VIP-Clean-ArchitectureTests"
+               ReferencedContainer = "container:VIP-Clean-Architecture.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2A13253E24DB5C09006B1778"
+               BuildableName = "SPHUITests.xctest"
+               BlueprintName = "SPHUITests"
                ReferencedContainer = "container:VIP-Clean-Architecture.xcodeproj">
             </BuildableReference>
          </TestableReference>

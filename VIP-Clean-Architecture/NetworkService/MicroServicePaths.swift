@@ -1,5 +1,5 @@
 //
-//  NSViewController.swift
+//  MicroServicePaths.swift
 //  VIP-Clean-Architecture
 //
 //  Created by Ahil Ahilendran on 5/8/20.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct MicroServicePaths {
+    static let dataUsage = "/api/action/datastore_search"
+}
