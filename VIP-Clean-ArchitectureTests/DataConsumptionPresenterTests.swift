@@ -79,8 +79,6 @@ class DataConsumptionPresenterTests: XCTestCase {
         XCTAssertEqual(generatedVM[0].title, "Year: 2019 - 0.0")
     }
     
-    
-    
     func test_getMobileDataConsumption_calledLoadView() {
         // Given
         let interactor = DataConsumptionInteractorMock()
@@ -97,8 +95,6 @@ class DataConsumptionPresenterTests: XCTestCase {
         viewController.output?.getMobileDataConsumption()
         XCTAssertEqual(interactor.isGetMobileDataConsumptionCalled, true, "GetMobileDataConsumptionCalled not called")
     }
-    
-    
     
     func test_DataParsing() {
         let sampleResponse = """

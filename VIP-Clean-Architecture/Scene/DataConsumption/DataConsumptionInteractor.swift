@@ -15,8 +15,8 @@ final class DataConsumptionInteractor {
     let apiWorker: DataConsumptionApiWorker = DataConsumptionApiWorker()
     
     private var dataConsumptionRecord = [[SPHDataResponse.Record]]()
-    var offset: Int = 0
-    var limit: Int = 10
+    var offset: Int = .zero
+    var limit: Int = SPHConstants.limit
     var isFetchInProgress = false
     
     // MARK: - Initializers
@@ -39,14 +39,14 @@ extension DataConsumptionInteractor: DataConsumptionInteractorInput {
 extension  DataConsumptionInteractor: DataConsumptionApiProtocol {
     func didGetDataConsumption(response: SPHDataResponse.DataUsage?) {
         self.isFetchInProgress = false
-        self.offset = response?.result?.offset ?? 0
-        self.limit = response?.result?.limit ?? 10
+        self.offset = response?.result?.offset ?? .zero
+        self.limit = response?.result?.limit ?? SPHConstants.limit
         updateConsumptionList(response?.result?.records ?? [])
     }
     
     func didFailedDataConsumption() {
         self.isFetchInProgress = false
-        self.output.displayErrorMessage(message: "")
+        self.output.displayErrorMessage(message: SPHL.tryAgain.localized)
         
     }
 }

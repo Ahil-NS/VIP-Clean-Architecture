@@ -43,7 +43,7 @@ extension DataConsumptionPresenter: DataConsumptionPresenterInput {
                                                                       dataUsage: singleData.volumeOfMobileData)
                 cellVM.append(vm)
                 let totalAmount = item.map({Float($0.volumeOfMobileData ?? "0") ?? 0}).reduce(0, +)
-                year = "Year: \(singleData.year) - \(totalAmount)"
+                year = "\(SPHL.year.localized) \(singleData.year) - \(totalAmount)"
             }
             vmData.append((year, cellVM))
         }

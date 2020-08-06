@@ -20,5 +20,11 @@ public extension UIView {
         bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -margin).isActive = true
         topAnchor.constraint(equalTo: containerView.topAnchor, constant: margin).isActive = true
     }
+    
+    func constrainHeight999Priority(to height: CGFloat) {
+        let constraint = heightAnchor.constraint(equalToConstant: height)
+        constraint.priority = UILayoutPriority(999)
+        constraint.isActive = true
+    }
 }
 

@@ -18,25 +18,17 @@ class DataConsumptionViewHeader: UITableViewHeaderFooterView {
     
     let titleLabel : NSLabel = {
         let lbl = NSLabel()
-        lbl.textColor = .black
+        lbl.textColor = SPHC.white
         lbl.font = UIFont.boldSystemFont(ofSize: 16)
         lbl.numberOfLines = 0
         lbl.textAlignment = .left
         return lbl
     }()
     
-    lazy var cellStackView: NSVerticalStackView = {
-        let stackView: NSVerticalStackView = NSVerticalStackView()
-        stackView.addArrangedSubview(NSVertical15Spacer())
-        stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(NSVertical15Spacer())
-        return stackView
-    }()
-    
     lazy var containerStackView: NSHorizontalStackView = {
         let stackView:NSHorizontalStackView = NSHorizontalStackView()
         stackView.addArrangedSubview(NSHorizontalSpacer.create(with: 30))
-        stackView.addArrangedSubview(cellStackView)
+        stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(NSHorizontalSpacer.create(with: 30))
         return stackView
     }()
@@ -51,7 +43,7 @@ class DataConsumptionViewHeader: UITableViewHeaderFooterView {
     }
     
     func setupViews() {
-        contentView.backgroundColor = .orange
+        contentView.backgroundColor =  SPHC.lightBlue
         addSubview(containerStackView)
         containerStackView.fill(self)
     }

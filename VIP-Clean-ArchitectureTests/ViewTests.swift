@@ -40,7 +40,7 @@ class ViewTests: XCTestCase {
     }
     
     func test_Constant() {
-        let iconImage = SPHConstants.AssetString.downIcon.value
+        let iconImage = SPHAssets.downIcon.value
         XCTAssertEqual(iconImage, "down-icon")
     }
     

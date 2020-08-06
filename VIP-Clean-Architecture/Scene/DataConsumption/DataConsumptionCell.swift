@@ -30,18 +30,17 @@ class DataConsumptionCell: UITableViewCell {
     
     let quaterLabel : NSLabel = {
         let lbl = NSLabel()
-        lbl.textColor = .black
-        lbl.font = UIFont.boldSystemFont(ofSize: 16)
+        lbl.textColor = SPHC.SPHBlue
+        lbl.font = UIFont.boldSystemFont(ofSize: 20)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
         return lbl
     }()
     
-    
     let dataUsageLabel : NSLabel = {
         let lbl = NSLabel()
-        lbl.textColor = .black
-        lbl.font = UIFont.systemFont(ofSize: 16)
+        lbl.textColor = SPHC.SPHBlue
+        lbl.font = UIFont.systemFont(ofSize: 14)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
         return lbl
@@ -51,7 +50,7 @@ class DataConsumptionCell: UITableViewCell {
         let stackView: NSVerticalStackView = NSVerticalStackView()
         stackView.addArrangedSubview(NSVertical15Spacer())
         stackView.addArrangedSubview(quaterLabel)
-        stackView.addArrangedSubview(NSVertical15Spacer())
+        stackView.addArrangedSubview(NSVertical5Spacer())
         stackView.addArrangedSubview(dataUsageLabel)
         stackView.addArrangedSubview(NSVertical15Spacer())
         return stackView
@@ -68,11 +67,8 @@ class DataConsumptionCell: UITableViewCell {
         return stackView
     }()
     
-    
     var containerView = NSView()
-    
     var downButton = NSButton()
-    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -81,13 +77,11 @@ class DataConsumptionCell: UITableViewCell {
     
     func setupViews() {
         setupCloseButton()
-        containerView.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+        containerView.backgroundColor = SPHC.paleBlue
         containerView.layer.cornerRadius = 10
-        
         
         containerView.addSubview(cellHorizontalStackView)
         cellHorizontalStackView.fill(containerView)
-        
         
         contentView.addSubview(containerView)
         containerView.fill(contentView, withMargin: 20)
@@ -98,7 +92,7 @@ class DataConsumptionCell: UITableViewCell {
     }
     
     func setupCloseButton() {
-        let downImage = UIImage(named: SPHConstants.AssetString.downIcon.value)
+        let downImage = UIImage(named: SPHAssets.downIcon.value)
         downButton.setBackgroundImage(downImage, for: .normal)
         downButton.tintColor = .white
         downButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
@@ -109,5 +103,4 @@ class DataConsumptionCell: UITableViewCell {
     @objc func downButtonTapped() {
         delegate?.downButtonTapped()
     }
-    
 }

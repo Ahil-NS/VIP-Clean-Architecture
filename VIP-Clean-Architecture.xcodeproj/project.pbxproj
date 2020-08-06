@@ -205,7 +205,6 @@
 				2AACCB4424D9C74500FE98F6 /* NetworkService */,
 				2AACCB4024D9C67200FE98F6 /* Domian */,
 				2AACCB3E24D9C59300FE98F6 /* Scene */,
-				2AACCB2224D9BEA600FE98F6 /* VIP_Clean_Architecture.xcdatamodeld */,
 				2AACCB2A24D9BEA800FE98F6 /* Info.plist */,
 			);
 			path = "VIP-Clean-Architecture";
@@ -291,6 +290,7 @@
 				2AACCB4924D9C89F00FE98F6 /* Colors.swift */,
 				2AACCB4B24D9C8BD00FE98F6 /* Assets.swift */,
 				2AACCB2724D9BEA800FE98F6 /* LaunchScreen.storyboard */,
+				2AACCB2224D9BEA600FE98F6 /* VIP_Clean_Architecture.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -317,10 +317,10 @@
 		2AACCB5524D9CB9300FE98F6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				2A13251D24DA7866006B1778 /* BaseConfig.swift */,
+				2A13252924DAFE53006B1778 /* Environment.swift */,
 				2A13252324DA8FF7006B1778 /* NSConstraint.swift */,
 				2A13252524DAA6E2006B1778 /* Extensions.swift */,
-				2A13252924DAFE53006B1778 /* Environment.swift */,
+				2A13251D24DA7866006B1778 /* BaseConfig.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

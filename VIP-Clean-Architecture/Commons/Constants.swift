@@ -6,15 +6,23 @@
 //  Copyright © 2020 Ahil Ahilendran. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 typealias SPHL = SPHConstants.SPHLoacalisation
 
 struct SPHConstants {
     
+    static var limit = 10
+    static var spacingConstaraint40: CGFloat = 40
+    
     enum SPHLoacalisation: String {
         case decreasedMessage = "decreasedMessage"
-        
+        case tableviewIdentifier = "table--dataConsumptionTableView"
+        case title = "Mobile Data Usage"
+        case decreaseMsg = "Decrease in volume data."
+        case okay = "OK"
+        case year = "Year:"
+        case tryAgain = "Please try Again"
         var localized: String {
             return self.rawValue
         }

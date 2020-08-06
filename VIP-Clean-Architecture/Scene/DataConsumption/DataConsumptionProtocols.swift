@@ -21,7 +21,6 @@ protocol DataConsumptionPresenterOutput: AnyObject {
 public protocol DataConsumptionApiProtocol: class {
     func didGetDataConsumption(response: SPHDataResponse.DataUsage?)
     func didFailedDataConsumption()
-    
 }
 
 public protocol DataConsumptionApiWorkerProtocol {
