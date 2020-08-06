@@ -98,6 +98,7 @@ class DataConsumptionCell: UITableViewCell {
         downButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         downButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         downButton.addTarget(self, action: #selector(downButtonTapped), for: .touchUpInside)
+        downButton.accessibilityIdentifier = SPHL.downButtonIdentifier.localized
     }
     
     @objc func downButtonTapped() {

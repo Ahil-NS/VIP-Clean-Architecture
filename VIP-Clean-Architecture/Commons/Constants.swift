@@ -18,6 +18,7 @@ struct SPHConstants {
     enum SPHLoacalisation: String {
         case decreasedMessage = "decreasedMessage"
         case tableviewIdentifier = "table--dataConsumptionTableView"
+        case downButtonIdentifier = "button--downButton"
         case title = "Mobile Data Usage"
         case decreaseMsg = "Decrease in volume data."
         case okay = "OK"
