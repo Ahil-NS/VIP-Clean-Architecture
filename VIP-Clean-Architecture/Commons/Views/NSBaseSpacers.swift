@@ -63,3 +63,11 @@ class NSVertical15Spacer: NSVerticalSpacer {
         heightAnchor.constraint(equalToConstant: 15).isActive = true
     }
 }
+
+class NSVertical5Spacer: NSVerticalSpacer {
+    override func setupConstraints() {
+        super.setupConstraints()
+        heightAnchor.constraint(equalToConstant: 5).isActive = true
+    }
+}
+

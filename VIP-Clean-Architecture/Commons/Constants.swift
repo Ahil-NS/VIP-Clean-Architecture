@@ -8,12 +8,14 @@
 
 import Foundation
 
+typealias SPHL = SPHConstants.SPHLoacalisation
+
 struct SPHConstants {
     
-    enum AssetString: String {
-        case downIcon = "down-icon"
+    enum SPHLoacalisation: String {
+        case decreasedMessage = "decreasedMessage"
         
-        var value: String {
+        var localized: String {
             return self.rawValue
         }
     }
