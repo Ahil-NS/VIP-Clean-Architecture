@@ -39,6 +39,16 @@
                ReferencedContainer = "container:VIP-Clean-Architecture.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2A13253E24DB5C09006B1778"
+               BuildableName = "SPHUITests.xctest"
+               BlueprintName = "SPHUITests"
+               ReferencedContainer = "container:VIP-Clean-Architecture.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

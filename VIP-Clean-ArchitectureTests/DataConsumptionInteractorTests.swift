@@ -31,24 +31,10 @@ class DataConsumptionInteractorTests: XCTestCase {
          // Given
          let presenter = DataConsumptionPresenterMock()
          let interactor = DataConsumptionInteractor(output: presenter)
-         let mockData: SPHDataResponse.DataUsage? = mockResponse()
+        let mockData: SPHDataResponse.DataUsage? = MockApiClient().mockResponse()
          interactor.didGetDataConsumption(response: mockData)
          XCTAssertEqual(interactor.limit, 30)
          XCTAssertEqual(interactor.offset, 40)
          XCTAssertEqual(interactor.isFetchInProgress, false, "")
      }
-    
-    func mockResponse() -> SPHDataResponse.DataUsage? {
-           if let path = Bundle.main.path(forResource: "mock_response", ofType: "json") {
-               do {
-                   let data = try Data(contentsOf: URL(fileURLWithPath: path))
-                   return try JSONDecoder().decode(SPHDataResponse.DataUsage.self, from: data)
-               } catch {
-                   print("unableToDecode.rawValue")
-               }
-           }
-           return nil
-       }
-    
-    
 }

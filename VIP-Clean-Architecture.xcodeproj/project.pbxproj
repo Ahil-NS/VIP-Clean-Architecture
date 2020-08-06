@@ -18,16 +18,18 @@
 		2A13252C24DB15C9006B1778 /* DataConsumptionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13252B24DB15C9006B1778 /* DataConsumptionPresenterTests.swift */; };
 		2A13252E24DB4740006B1778 /* ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13252D24DB4740006B1778 /* ViewTests.swift */; };
 		2A13253224DB4A20006B1778 /* DataConsumptionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13253124DB4A20006B1778 /* DataConsumptionViewControllerTests.swift */; };
-		2A13253424DB4DDF006B1778 /* mock_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A13253324DB4DDF006B1778 /* mock_response.json */; };
+		2A13253424DB4DDF006B1778 /* response_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A13253324DB4DDF006B1778 /* response_success.json */; };
 		2A13253824DB53D6006B1778 /* DataConsumptionInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13253724DB53D6006B1778 /* DataConsumptionInteractorTests.swift */; };
-		2A13253A24DB56A7006B1778 /* mock_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A13253324DB4DDF006B1778 /* mock_response.json */; };
+		2A13253A24DB56A7006B1778 /* response_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A13253324DB4DDF006B1778 /* response_success.json */; };
+		2A13254224DB5C09006B1778 /* SPHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13254124DB5C09006B1778 /* SPHUITests.swift */; };
+		2A13254D24DB6644006B1778 /* response_failure.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A13254C24DB6644006B1778 /* response_failure.json */; };
+		2A47992E24DBB5340066129B /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47992D24DBB5340066129B /* MockApiClient.swift */; };
 		2AACCB1A24D9BEA600FE98F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB1924D9BEA600FE98F6 /* AppDelegate.swift */; };
 		2AACCB1C24D9BEA600FE98F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB1B24D9BEA600FE98F6 /* SceneDelegate.swift */; };
 		2AACCB1E24D9BEA600FE98F6 /* DataConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB1D24D9BEA600FE98F6 /* DataConsumptionViewController.swift */; };
 		2AACCB2424D9BEA600FE98F6 /* VIP_Clean_Architecture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB2224D9BEA600FE98F6 /* VIP_Clean_Architecture.xcdatamodeld */; };
 		2AACCB2624D9BEA800FE98F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AACCB2524D9BEA800FE98F6 /* Assets.xcassets */; };
 		2AACCB2924D9BEA800FE98F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AACCB2724D9BEA800FE98F6 /* LaunchScreen.storyboard */; };
-		2AACCB3424D9BEA800FE98F6 /* VIP_Clean_ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB3324D9BEA800FE98F6 /* VIP_Clean_ArchitectureTests.swift */; };
 		2AACCB4324D9C72000FE98F6 /* DataUsageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB4224D9C72000FE98F6 /* DataUsageResponse.swift */; };
 		2AACCB4624D9C77300FE98F6 /* DataUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB4524D9C77300FE98F6 /* DataUsageService.swift */; };
 		2AACCB4A24D9C89F00FE98F6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACCB4924D9C89F00FE98F6 /* Colors.swift */; };
@@ -47,6 +49,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2A13254424DB5C09006B1778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AACCB0E24D9BEA600FE98F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AACCB1524D9BEA600FE98F6;
+			remoteInfo = "VIP-Clean-Architecture";
+		};
 		2AACCB3024D9BEA800FE98F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2AACCB0E24D9BEA600FE98F6 /* Project object */;
@@ -68,8 +77,13 @@
 		2A13252B24DB15C9006B1778 /* DataConsumptionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConsumptionPresenterTests.swift; sourceTree = "<group>"; };
 		2A13252D24DB4740006B1778 /* ViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTests.swift; sourceTree = "<group>"; };
 		2A13253124DB4A20006B1778 /* DataConsumptionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConsumptionViewControllerTests.swift; sourceTree = "<group>"; };
-		2A13253324DB4DDF006B1778 /* mock_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_response.json; sourceTree = "<group>"; };
+		2A13253324DB4DDF006B1778 /* response_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response_success.json; sourceTree = "<group>"; };
 		2A13253724DB53D6006B1778 /* DataConsumptionInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConsumptionInteractorTests.swift; sourceTree = "<group>"; };
+		2A13253F24DB5C09006B1778 /* SPHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A13254124DB5C09006B1778 /* SPHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPHUITests.swift; sourceTree = "<group>"; };
+		2A13254324DB5C09006B1778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A13254C24DB6644006B1778 /* response_failure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response_failure.json; sourceTree = "<group>"; };
+		2A47992D24DBB5340066129B /* MockApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiClient.swift; sourceTree = "<group>"; };
 		2AACCB1624D9BEA600FE98F6 /* VIP-Clean-Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIP-Clean-Architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AACCB1924D9BEA600FE98F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AACCB1B24D9BEA600FE98F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +93,6 @@
 		2AACCB2824D9BEA800FE98F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AACCB2A24D9BEA800FE98F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AACCB2F24D9BEA800FE98F6 /* VIP-Clean-ArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VIP-Clean-ArchitectureTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AACCB3324D9BEA800FE98F6 /* VIP_Clean_ArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIP_Clean_ArchitectureTests.swift; sourceTree = "<group>"; };
 		2AACCB3524D9BEA800FE98F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AACCB4224D9C72000FE98F6 /* DataUsageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageResponse.swift; sourceTree = "<group>"; };
 		2AACCB4524D9C77300FE98F6 /* DataUsageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageService.swift; sourceTree = "<group>"; };
@@ -106,6 +119,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2A13253C24DB5C09006B1778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AACCB1324D9BEA600FE98F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,11 +154,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2A13254024DB5C09006B1778 /* SPHUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2A13254124DB5C09006B1778 /* SPHUITests.swift */,
+				2A13254324DB5C09006B1778 /* Info.plist */,
+			);
+			path = SPHUITests;
+			sourceTree = "<group>";
+		};
+		2A13254E24DB676E006B1778 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				2A13253324DB4DDF006B1778 /* response_success.json */,
+				2A13254C24DB6644006B1778 /* response_failure.json */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
 		2AACCB0D24D9BEA600FE98F6 = {
 			isa = PBXGroup;
 			children = (
 				2AACCB1824D9BEA600FE98F6 /* VIP-Clean-Architecture */,
 				2AACCB3224D9BEA800FE98F6 /* VIP-Clean-ArchitectureTests */,
+				2A13254024DB5C09006B1778 /* SPHUITests */,
 				2AACCB1724D9BEA600FE98F6 /* Products */,
 				C2D3109BAB42B287DF2AD633 /* Pods */,
 				0965AB7CE825D7092E26F230 /* Frameworks */,
@@ -150,6 +189,7 @@
 			children = (
 				2AACCB1624D9BEA600FE98F6 /* VIP-Clean-Architecture.app */,
 				2AACCB2F24D9BEA800FE98F6 /* VIP-Clean-ArchitectureTests.xctest */,
+				2A13253F24DB5C09006B1778 /* SPHUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,13 +214,13 @@
 		2AACCB3224D9BEA800FE98F6 /* VIP-Clean-ArchitectureTests */ = {
 			isa = PBXGroup;
 			children = (
-				2AACCB3324D9BEA800FE98F6 /* VIP_Clean_ArchitectureTests.swift */,
+				2A13254E24DB676E006B1778 /* mock */,
 				2AACCB3524D9BEA800FE98F6 /* Info.plist */,
 				2A13252B24DB15C9006B1778 /* DataConsumptionPresenterTests.swift */,
 				2A13252D24DB4740006B1778 /* ViewTests.swift */,
 				2A13253124DB4A20006B1778 /* DataConsumptionViewControllerTests.swift */,
-				2A13253324DB4DDF006B1778 /* mock_response.json */,
 				2A13253724DB53D6006B1778 /* DataConsumptionInteractorTests.swift */,
+				2A47992D24DBB5340066129B /* MockApiClient.swift */,
 			);
 			path = "VIP-Clean-ArchitectureTests";
 			sourceTree = "<group>";
@@ -308,6 +348,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2A13253E24DB5C09006B1778 /* SPHUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A13254624DB5C09006B1778 /* Build configuration list for PBXNativeTarget "SPHUITests" */;
+			buildPhases = (
+				2A13253B24DB5C09006B1778 /* Sources */,
+				2A13253C24DB5C09006B1778 /* Frameworks */,
+				2A13253D24DB5C09006B1778 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A13254524DB5C09006B1778 /* PBXTargetDependency */,
+			);
+			name = SPHUITests;
+			productName = SPHUITests;
+			productReference = 2A13253F24DB5C09006B1778 /* SPHUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		2AACCB1524D9BEA600FE98F6 /* VIP-Clean-Architecture */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AACCB3824D9BEA800FE98F6 /* Build configuration list for PBXNativeTarget "VIP-Clean-Architecture" */;
@@ -352,10 +410,14 @@
 		2AACCB0E24D9BEA600FE98F6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Ahil Ahilendran";
 				TargetAttributes = {
+					2A13253E24DB5C09006B1778 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2AACCB1524D9BEA600FE98F6;
+					};
 					2AACCB1524D9BEA600FE98F6 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -380,18 +442,26 @@
 			targets = (
 				2AACCB1524D9BEA600FE98F6 /* VIP-Clean-Architecture */,
 				2AACCB2E24D9BEA800FE98F6 /* VIP-Clean-ArchitectureTests */,
+				2A13253E24DB5C09006B1778 /* SPHUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2A13253D24DB5C09006B1778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AACCB1424D9BEA600FE98F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2AACCB2924D9BEA800FE98F6 /* LaunchScreen.storyboard in Resources */,
 				2AACCB2624D9BEA800FE98F6 /* Assets.xcassets in Resources */,
-				2A13253A24DB56A7006B1778 /* mock_response.json in Resources */,
+				2A13253A24DB56A7006B1778 /* response_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +469,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A13253424DB4DDF006B1778 /* mock_response.json in Resources */,
+				2A13253424DB4DDF006B1778 /* response_success.json in Resources */,
+				2A13254D24DB6644006B1778 /* response_failure.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +541,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2A13253B24DB5C09006B1778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A13254224DB5C09006B1778 /* SPHUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AACCB1224D9BEA600FE98F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,7 +588,7 @@
 			files = (
 				2A13252C24DB15C9006B1778 /* DataConsumptionPresenterTests.swift in Sources */,
 				2A13253824DB53D6006B1778 /* DataConsumptionInteractorTests.swift in Sources */,
-				2AACCB3424D9BEA800FE98F6 /* VIP_Clean_ArchitectureTests.swift in Sources */,
+				2A47992E24DBB5340066129B /* MockApiClient.swift in Sources */,
 				2A13253224DB4A20006B1778 /* DataConsumptionViewControllerTests.swift in Sources */,
 				2A13252E24DB4740006B1778 /* ViewTests.swift in Sources */,
 			);
@@ -518,6 +597,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2A13254524DB5C09006B1778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AACCB1524D9BEA600FE98F6 /* VIP-Clean-Architecture */;
+			targetProxy = 2A13254424DB5C09006B1778 /* PBXContainerItemProxy */;
+		};
 		2AACCB3124D9BEA800FE98F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2AACCB1524D9BEA600FE98F6 /* VIP-Clean-Architecture */;
@@ -537,6 +621,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2A13254724DB5C09006B1778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SPHUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsa.SPHUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "VIP-Clean-Architecture";
+			};
+			name = Debug;
+		};
+		2A13254824DB5C09006B1778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SPHUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsa.SPHUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "VIP-Clean-Architecture";
+			};
+			name = Release;
+		};
 		2AACCB3624D9BEA800FE98F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AACCB5924D9CE4100FE98F6 /* Dev.xcconfig */;
@@ -736,6 +858,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A13254624DB5C09006B1778 /* Build configuration list for PBXNativeTarget "SPHUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A13254724DB5C09006B1778 /* Debug */,
+				2A13254824DB5C09006B1778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2AACCB1124D9BEA600FE98F6 /* Build configuration list for PBXProject "VIP-Clean-Architecture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
