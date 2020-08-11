@@ -1,0 +1,17 @@
+//
+//  Production.xcconfig
+//  VIP-Clean-Architecture
+//
+//  Created by Ahil Ahilendran on 5/8/20.
+//  Copyright © 2020 Ahil Ahilendran. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_BUNDLE_IDENTIFIER = com.sph.nsa.dev
+APP_DISPLAYNAME = SPH
+BASE_URL = https:/$()/data.gov.sg
+APP_VERSION = 1.0
+BUILD_VERSION = 1.0
+RESOURCE_ID = a807b7ab-6cad-4aa6-87d0-e283a7353a0f
